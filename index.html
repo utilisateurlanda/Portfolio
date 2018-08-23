@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--Pour que les média queries fonctionnent sur le mobile -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- lien vers la feuille de style -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- lien vers la Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  <!--ajout du lien vers la police de googlefont  -->
+    
+    <!-- lien vers fontawesome pour l'incorporation des icones  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
+    <!-- lien vers la bibliothèque jquery du cdn c'est à dire de google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- lien vers la bibliothèque d'animation du site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">    
+
+    <!-- lien vers la bibliothèque d'animation du site Permet d'ajouter la rotation sur "A propos" par exemple-->
+    <script src="./animejs/anime-master/anime.min.js"></script>
+    
+    <!--  lien vers mon fichier js -->
+    <script type="text/javascript" src="script.js"></script>
+
+    <title>Ergonaute</title>
+
+</head>
+
+<body>
+    <div class="grid">
+        <header class="header">
+            <span class="header-icone">
+                <img src="./images/logorond.png" alt="Accueil">
+            </span>
+            <span class="page-header-texte">
+                <h1 class="h1">Ergonaute</h1>
+                <h2 class="h2">UX design - Ergonomie</h2>
+                <h2 class="h2">+ Web design</h2> 
+            </span> 
+            <span class="page-header-liens">
+                <a href="#" class="carre-rouge animated rotateInUpLeft delay-1s">A propos</a>
+                <a href="#" class="carre-jaune">Contact</a>
+            </span>
+
+        </header> 
+
+        <main class="contenu">
+
+            <div class="zone-gauche">
+                <div class="text-left">
+                    <h1 class="h1">Ergonomie des IHMs et UX design</h1>
+                    <p>L'ergonomie est la science qui étudie l'activité humaine. L'ergonomie des IHMs est la discipline dédiée aux Interfaces Homme Machine. <br> 
+                    L'ergonome va concevoir, des interfaces adaptées à l'activité des utilisateurs finaux. Il va construire des IHMs utiles, utilisables et efficientes, ... induisant une prise en main rapide et des parcours utilisateurs optimaux.
+                    <br> L'UX design : Conception centrée sur l'expérience de l'utilisateur. 
+                    <br>Quelques exemples de missions classées par types : </p>
+                </div>
+
+                <div class="damier">
+                    <span class="carre-noir"><a href="#" class="lien-blanc">Audit</a></span>
+                    <span class="carre-blanc"><a href="#">Test utilisateur</a></span>
+                    <span class="carre-blanc"><a href="#">Conception</a></span>
+                    <span class="carre-noir"><a href="#" class="lien-blanc">3D</a></span>
+                </div>
+
+            </div>
+
+            <div class="zone-droite">
+                <div class="text-right">
+                    <h1 class="h1">Web design et graphisme</h1>   
+                    <p>Formation complémentaire :<br>
+                        <i class="fas fa-caret-right"></i> Graphisme : Adobe Illustrator, Adobe Photoshop, Adobe In Design, Figma, ...<br> 
+                        <i class="fas fa-caret-right"></i> Développement : HTML5, CSS3, Grid, Flex, Media Queries, jQuery<br> 
+                        <i class="fas fa-caret-right"></i> CMS : Wordpress, ... <br>
+                        Exemples de réalisations :</p>
+                </div>
+
+
+                <div class="damier">   
+                    <span class="carre-blanc"><a href="wd-edition.html">Edition</a></span>
+                    <span class="carre-noir"><a href="wd-illustration.html" class="lien-blanc">Illustration</a></span>
+                    <span class="carre-noir"><a href="wd-identite.html" class="lien-blanc">Identité visuelle</a></span>
+                    <span class="carre-blanc"><a href="wd-creation.html">Création libre</a></span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <span class="footer-left"></span>
+            <span class="footer-center">
+            </span> 
+            <span class="footer-right">
+                <span class="footer-right1"></span>
+                <span class="footer-right2"></span>
+            </span>
+        </footer>
+    </div>
+    </div>
+</body>
+</html>

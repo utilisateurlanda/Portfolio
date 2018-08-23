@@ -1,0 +1,713 @@
+/*Meyer reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Box sizing */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+
+/*--------------------LES FONTES------------------------------ */
+
+body{
+	font-family: 'roboto', sans-serif;
+	font-size: 16px;
+    font-weight: normal;
+}
+a {
+    color: var(--opposite-color);
+    text-decoration: none;
+    font-size: 0.9rem;  /* voir la calculette de conversion */
+}
+h1{
+    font-size: 1rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+figcaption{
+    margin-bottom: 1rem;
+    line-height: 1.3rem;
+    text-align: center;
+}
+.def{
+    text-decoration: underline;
+}
+.active {
+    background-color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.lien-blanc{
+    color: var(--primary-color);
+}
+.lien-noir{
+    color: var(--opposite-color);
+}
+.lien-souligne {
+    text-decoration: underline;
+}
+.lien-souligne :hover {
+    font-weight: bold;
+}
+
+.nav-ux a {
+	color: var(--primary-color);
+    transition: color linear 0.15s; /* Effet de changement de couleur progressif*/
+}
+.nav-ux a:hover, .nav-wd a:hover, .page-header-liens a:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------Les VARIABLES  -----------------------*/
+:root {
+	--primary-color: white;
+	--opposite-color: #333333;
+}
+/*----------------------MISE EN PAGE------------------------------------- */
+body {
+    height: 100%;
+    background-position-x: 0;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color);
+    background-image: url(./images/bg/nuage.jpg);
+    background-size: cover;
+}
+.grid {
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 60px 4fr 4fr 60px;
+    grid-gap: 0;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    margin: 1% auto auto auto;
+    max-width: 1200px;
+}
+.flex {
+    display: flex;  
+}
+
+/* --------------------------HEADER --------------------------------*/
+
+.header {
+    grid-column: 1/ all; 
+    grid-row: 1/span 1;
+    display: flex;
+    flex-direction : row;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--opposite-color);
+    background-position: 0 -10%;
+    color: var(--primary-color);
+}
+.header-icone {
+    padding-left: 1rem;
+}
+.header-icone img {
+    max-width: 90px;
+}
+.page-header-texte, .page-header-texte1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center; /*justification au centre des lignes du texte*/
+    align-self: center;  /* centre verticalement */
+    line-height: 1.5rem;
+    padding-right: 4rem;
+}
+.page-header-texte1{
+    text-align: right;
+    padding-right: 1rem;
+}
+.page-header-liens {
+   display: flex;
+   flex-direction: column;
+   font-size: 0.8rem;
+}
+.carre-jaune{
+	background-color: #FFE609;
+}
+.carre-rouge{
+	background-color: #EB5757;
+}
+.carre-jaune, .carre-rouge{
+    width: 3.75rem;
+	height: 3.75rem;
+    padding-top: 1.5rem;  /* alignement du texte par rapport au top*/
+	text-align: center;  /* centrage du texte*/
+}
+
+/* ---------------------------MAIN----------------------------------- */
+.contenu{
+    grid-column: 2/4; 
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.zone-gauche, .zone-droite{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 60px;
+}
+.zone-gauche{
+    border-right: 1px solid var(--opposite-color); 
+}
+.text-left, .text-right{
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.5rem; /* interligne */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.text-left p, .text-right p {
+    margin-top: 1rem;
+}
+.damier{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80%;
+}
+.carre-blanc, .carre-noir{
+    width: 150px;
+    height: 150px;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    border: 1px solid var(--opposite-color);
+    display: flex; /* Alignement du texte dans les cellules */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carre-blanc{
+    background-color: var(--primary-color);
+    color: var(--opposite-color);
+}
+.carre-noir{
+    background-color: var(--opposite-color);
+    color: var(--primary-color);   
+}
+.lien-blanc{
+    color: var(--primary-color);
+}
+.lien-noir{
+    color: var(--opposite-color);
+}
+
+
+/* ----------------------FOOTER --------------------------*/
+footer {
+    grid-column: 1/all;
+    grid-row: 3/4;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.footer-left {
+    width: 60px;
+    height: 60px;
+}
+.footer-center {
+    width: 120px;
+    height: 60px;
+    background-color: var(--opposite-color);
+    border: 1px solid var(--opposite-color);
+    margin-left: 7.5rem;
+}
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+.footer-right1 {
+    background: var(--opposite-color);
+    width: 60px;
+    height: 60px;
+}
+.footer-right2 {
+    background: var(--opposite-color);
+    width: 60px;
+    height: 60px;
+    margin-left: 3.75rem; 
+}
+
+/* ------------------------------------------------------------------*/
+/*                               Page WD - Edition                    */
+/* -------------------------------------------------------------------*/
+
+.grid1 {
+    display: grid;
+    grid-template-rows: 60px 60px 1fr 60px;
+    grid-template-columns: 60px 240px 120px 1fr 60px;
+    grid-gap: 0px;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    margin: 1% auto auto auto;
+    max-width: 1200px;
+}
+.header1 {
+    grid-column: 1/span 3;
+    grid-row: 1/span 2;
+    z-index: 99;
+    display: flex;
+    flex-direction : row;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--opposite-color);
+    color: var(--primary-color);
+}
+.nav {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: grid; 
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 3fr 1fr 3fr;
+    margin-right: 3.3rem;
+    max-height: 30rem;
+    position: fixed;
+    margin-top: 10rem;
+    margin-left: 60px;
+}
+.h1-ux  {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    background-color: #BED4DD; 
+}
+.h1-wd {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    background-color: #E5D4D4;
+    margin-top: 3rem;
+}
+.h1-ux, .h1-wd{
+    padding-left: 0.5rem;  /*pour distance du texte par rapport au contour du contenu*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav-ux {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.nav-wd {
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+.nav-ux, .nav-wd {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    line-height: 2rem; /* interligne */
+}
+li {
+    background-color: #333;
+    padding-left: 1rem; 
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.cellule-verte{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: #BED4DD; 
+}
+.cellule-rose{
+    grid-row: 4/5;
+    grid-column: 1/2;
+    background-color: #E5D4D4;
+}
+.right1 { 
+    grid-column: 3/5; /* Position sur GRID1*/
+    grid-row: 2/4;
+    width: 100%;
+    display: grid; 
+    grid-template-columns: 1px 1fr;
+    grid-template-rows: 1px 1fr;
+}
+.carrousel-icone{
+    grid-row: 1/span 1;    
+    grid-column: 2/span 1; /* Position sur RIGHT1*/
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 10;
+}
+.top-bordure{
+    border-top: 1px solid var(--opposite-color);
+    width: 100px;
+}
+.carrousel-icone > a > img {
+    height: 30px;
+    width: 30px;
+    transform: rotate(45deg);
+    margin-top: -1rem;
+}
+.position {
+    grid-row: 2/span 1;    
+    grid-column: 2/span 1; /* Position sur RIGHT1*/
+    padding-top: 10%;
+    border-bottom: 1px solid var(--opposite-color);
+    border-right: 1px solid var(--opposite-color);
+}
+
+.slider > div > img {
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid var(--opposite-color);
+}  
+
+.left-bordure{
+    grid-row: 2/span 1; /* position dans right 1 */
+    grid-column: 1/span 1;
+    border-left: 1px solid #333;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+}
+
+/* Footer1 */
+
+.footer1 {
+    grid-row: 4/span 1;
+}
+
+/* -------------------------------------------------------------------*/
+/*                          Page WD ILLUSTRATION                          */
+/* -------------------------------------------------------------------*/
+
+.right2 { 
+    grid-column: 3/5; /* Position sur GRID1*/
+    grid-row: 2/4;
+    border-right: 1px solid var(--opposite-color);
+    border-bottom: 1px solid var(--opposite-color);
+}    
+#illustration{
+    width: 100%;
+    padding-top: 3%;
+}
+#illustration > figure > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#illustration > figure > div > img {
+    max-width: 90%;
+    height:auto;
+    margin-bottom: 2rem;
+}
+
+
+/* -------------------------------------------------------------------*/
+/*                          Page WD CREATION                          */
+/* -------------------------------------------------------------------*/
+.menu2 {
+    display: none;
+}
+.menu2 ul {
+    list-style:none;
+}
+.icone-menu2, .icone-fermer {
+    display: none;
+}
+.icone-fermer{
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+#galerie {
+    grid-column: 2/span 1; /* Position sur RIGHT1*/
+    grid-row: 2/span 1;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    border-right: 1px solid var(--opposite-color);
+    border-bottom: 1px solid var(--opposite-color);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    /* height: 100vh; */
+}
+.zoom-in {
+    cursor: zoom-in;
+}
+.zoom-out {
+    cursor: zoom-out;
+}
+ /* Style de l'image */
+ #myImg1, #myImg2, #myImg3{
+    margin-top: 2.5rem;
+    border-radius: 3px;
+    cursor: zoom-in;
+    transition: 0.3s;
+    border: 1px solid var(--opposite-color);
+
+}
+#myImg1:hover, #myImg2:hover, #myImg3:hover{
+    opacity: 0.7;
+    transform: scale(1.02);
+    /*overflow: hidden;  pour avoir l'effet d'agrandissement cachée des zone zoomer mettre overflow dans le conteneur */
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* cachée par défaut */
+    position: fixed; /* reste en place */
+    z-index: 100000; /* s'affiche dessus */
+    padding-top: 100px; /* Localisation par rapport a la box */
+    left: 0; /* centrage */
+    top: 0;
+    width: 100%; /* Taille de la fenêtre modale pleine largeur */
+    height: 100%; /* Taille de la fenêtre modale pleine hauteur */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-height: 780px;
+}
+/* Legende of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/*Icone de fermeture */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover, 
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+} 
+.fas{
+    color: var(--primary-color);
+}
+
+
+
+
+/* -------------------------------------------------------------------*/
+/*                          Page A PROPOS                             */
+/* -------------------------------------------------------------------*/
+
+
+.definition {
+    margin-top: 10%;
+}
+    
+
+
+/* TABLETTE  */
+@media screen and (max-width : 900px){ /* sous 900px de large */
+
+    .contenu{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        grid-column: 1/2;
+    }
+    .zone-gauche, .zone-droite{
+        width: 100%;
+    }
+    .damier{
+        width: 65%;
+    } 
+    .footer, .footer1{
+        display: none;
+    }
+	.grid, .grid1 {
+		grid-template-rows: 60px 1fr 60px; /* dimensions qiu changent du bandeau du header*/
+        grid-template-columns: 1fr;
+    }
+    .header, .header1{
+        grid-row: 1/span 1;
+        grid-column: 1/span 1;
+    }
+    .header1 {
+        width: 100%;
+        position: fixed;
+        z-index: 10000;
+        align-items: flex-start;
+
+    }  
+    .header-icone {
+        display: none;
+    }
+	.page-header-texte h1, .page-header-texte1 h1 {
+		line-height: 1rem;
+	}
+	.page-header-texte h2, .page-header-texte1 h2 {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+	.page-header-liens {
+		flex-direction: row;
+        justify-content: flex-end;
+        font-size: 0.7rem;
+    }
+    .carre-noir{
+		width: 100px;
+		height: 100px;
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.carre-blanc{
+		width: 100px;
+		height: 100px;
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+    .nav{
+        display: none;
+    }
+    .icone-menu2 {
+        display: block;
+        margin-left: 1rem;
+        padding-top: 1rem;
+    }
+    .carrousel-icone{
+        display: none;
+    }
+    .right1, .right2 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .menu2{
+    line-height: 2rem;
+    padding-left: 2rem;
+    letter-spacing: 6px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+    #galerie{  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-right: 0;
+    border-bottom: 0;
+    }
+}
+
+/* ORDI */
+/* @media screen and (min-width : 800px){ au-dessus de 320px de large
+
+ }  */
+
+/* Sur tous types d'écrans orientés verticalement */
+ /* @media all and (orientation: portrait){ }  */
+

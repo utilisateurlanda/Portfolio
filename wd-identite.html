@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--Pour que les média queries fonctionnent sur le mobile -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- lien vers la feuille de style -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- lien vers la Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  <!--ajout du lien vers la police de googlefont  -->
+    
+    <!-- lien vers fontawesome pour l'incorporation des icones  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
+    <!-- lien vers la bibliothèque jquery du cdn c'est à dire de google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- lien vers la bibliothèque d'animation du site Permet d'ajouter la rotation sur "A propos" par exemple-->
+    <script src="./animejs/anime-master/anime.min.js"></script>
+   
+    <!--  lien vers mon fichier js -->
+    <script type="text/javascript" src="script.js"></script>
+
+    <!--  liens pour le slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <title>Ergonaute</title>
+
+</head>
+
+<body>
+    <div class="grid1">
+
+        <header class="header1 flex">
+
+                <a href="#" class="icone-menu2"><i class="fas fa-bars fa-lg"></i></a>
+                <a href="#" class="icone-fermer"><i class="fas fa-times fa-lg"></i></a>
+        
+                <nav class="menu2">
+                    <ul>
+                        <li><a href="ux-audit.html" class="lien-blanc">Audit</a></li>
+                        <li><a href="ux-test.html" class="lien-blanc">Test utilisateur</a></li>
+                        <li><a href="ux-conception.html" class="lien-blanc">Conception</a></li>
+                        <li><a href="ux-3d.html" class="lien-blanc">3D</a></li>
+                        <li><a href="wd-edition.html" class="lien-blanc">Edition</a></li>
+                        <li><a href="wd-illustration.html" class="lien-blanc">Illustration</a></li>
+                        <li><a class="active lien-noir">Identité visuelle</a></li> 
+                        <li><a href="wd-creation.html" class="lien-blanc">Création libre</a></li> 
+                    </ul>
+                </nav>
+
+            <div class="header-icone">
+                <a href="index.html"><img src="./images//logorond.png" alt="Accueil" title="Accueil"></a>
+            </div>
+            <span class="page-header-texte1">
+                <h1 class="h1">Ergonaute</h1>
+                <h2 class="h2">UX design & Ergonomie</h2>
+                <h2 class="h2">+ Web design</h2> 
+            </span> 
+            <span class="page-header-liens flex">
+                <a href="apropos.html" class="carre-rouge animated rotateInUpLeft delay-1s">A propos</a>
+                <a href="contact.html" class="carre-jaune">Contact</a>
+            </span>
+        </header> 
+
+        <nav class="nav">
+            <div class="h1-ux">
+                <h1>UX design & ergonomie</h1> 
+            </div>
+            <span class="cellule-verte"></span>
+            <ul class="nav-ux">
+                <li><a href="ux-audit.html" class="lien-blanc">Audit</a></li>
+                <li><a href="ux-test.html" class="lien-blanc">Test utilisateur</a></li>
+                <li><a href="ux-conception.html" class="lien-blanc">Conception</a></li> 
+                <li><a href="ux-3d.html" class="lien-blanc">3D</a></li>
+            </ul>
+            <div class="h1-wd">
+                <h1>Web design</h1>
+            </div>
+            <span class="cellule-rose"></span>
+            <ul class="nav-wd "> 
+                <li><a href="wd-edition.html" class="lien-blanc">Edition</a></li>
+                <li><a href="wd-illustration.html" class="lien-blanc">Illustration</a></li>
+                <li class="active lien noir">Identité visuelle</li>            
+                <li><a href="wd-creation.html" class="lien-blanc">Création libre</a></li> 
+            </ul>
+        </nav>
+        
+
+        <div class="right1">
+            <div class="carrousel-icone flex">
+                <a href="index.html"><img src="./images/icone-menu.svg" alt="Accueil" title="Accueil"></a>
+                <span class="top-bordure"></span>
+            </div>
+
+    <!--  ========================SLIDER JS ====================  -->
+            <section class="position">
+                <figure>
+                    <div class="slider">
+                        <div><img src="./images/identite4-800.png" alt></div>
+                        <div><img src="./images/identite5-800.png" alt></div>
+                        <div><img src="./images/identite1-800.png" alt></div> <!-- alt a remplir pour l’accessibilité et pour le SEO -->
+                        <div><img src="./images/identite2-800.png" alt></div>
+                        <div><img src="./images/identite3-800.png" alt></div>
+
+                    </div>
+                </figure>
+            </section>
+    <!--  ============================================  -->
+            <div class="left-bordure">
+            </div>
+        </div>
+
+
+
+<!--  ======================   FOOTER    ======================     -->
+
+        <footer class="footer1">
+            <span class="footer-right1"></span>
+            <span class="footer-right2"></span>
+        </footer>
+    </div>
+
+</body>
+
+</html>
