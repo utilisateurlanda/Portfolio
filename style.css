@@ -120,7 +120,7 @@ body {
     background-position-y: 0%;
     background-repeat: no-repeat;
     background-color: var(--primary-color);
-    background-image: url(./images/bg/nuage.jpg);
+    background-image: url(./images/bg/ocean.jpg);
     background-size: cover;
 }
 .grid {
